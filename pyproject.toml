@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edx-cli"
+version = "0.1.0"
+description = "Safe, short, multi-file text edits for coding agents"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = []
+
+[project.scripts]
+edx = "ed.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["ed"]
+
+[tool.setuptools.package-data]
+ed = ["SPEC.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
